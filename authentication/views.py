@@ -27,4 +27,4 @@ def VAuthentication(request):
             form.save()
 
     context = {'form':form}
-    return render(request, 'register/register.html', context)
+    return render(request, 'authentication/register.html', context)
