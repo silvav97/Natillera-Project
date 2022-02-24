@@ -24,6 +24,9 @@ urlpatterns = [
     path('', include('initial.urls')),
 
     path('authentication/', include('authentication.urls')),
+    path('natillera/', include('natillera_account.urls')),
+
+
 
     
 ]

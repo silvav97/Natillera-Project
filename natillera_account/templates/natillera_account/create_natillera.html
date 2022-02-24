@@ -1,0 +1,33 @@
+{% extends 'initial/main.html' %}
+
+
+{% block title %}
+    Create Natillera
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>Here we create the Natillera, but for the moment, let's show all the natilleras</h1>
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Monthly Fee</th>
+        </tr>
+
+        {% for natillera in natilleras %}
+            <tr>
+                <td>{{natillera.id}}</td>
+                <td>{{natillera.name}}</td>
+                <td>{{natillera.monthlyfee}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    
+    
+
+
+{% endblock %}
