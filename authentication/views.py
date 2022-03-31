@@ -16,15 +16,18 @@ from .forms import CreateUserForm
         pass
 """
 
-def VAuthentication(request):
-    # form = UserCreationForm()
-    form = CreateUserForm()
 
+def registerPage(request):
+    form = CreateUserForm() # form = UserCreationForm()
     if request.method=='POST':
-        # form = UserCreationForm(request.POST)
-        form = CreateUserForm(request.POST)
+        form = CreateUserForm(request.POST) # form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-
+        
     context = {'form':form}
     return render(request, 'authentication/register.html', context)
+
+
+def Log_in(request):
+    context={}
+    return render(request, 'authentication/login.html', context)
