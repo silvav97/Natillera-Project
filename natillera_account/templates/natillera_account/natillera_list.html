@@ -2,26 +2,28 @@
 
 
 {% block title %}
-    Create Natillera
+    Natillera List
 {% endblock %}
 
 
 {% block content %}
 
-    <h1>Here we create the Natillera, but for the moment, let's show all the natilleras</h1>
-
+    <hr>
+    <a href="{% url 'natillera_create' %}">Create new Natillera</a>
     <table class="table">
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Monthly Fee</th>
+            <th>User</th>
         </tr>
 
         {% for natillera in natilleras %}
             <tr>
                 <td>{{natillera.id}}</td>
-                <td>{{natillera.name}}</td>
+                <td><a href="{% url 'natillera_detail' natillera.id %}">{{natillera.name}}</a></td>
                 <td>{{natillera.monthlyfee}}</td>
+                <td>{{natillera.user}}</td>
             </tr>
         {% endfor %}
 

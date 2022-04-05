@@ -1,0 +1,21 @@
+{% extends 'initial/main.html' %}
+
+
+{% block title %}
+    Create Natillera
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Creation of natillera</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    NatilleraName{{form.name}}
+    <br>
+    MonthlyFee{{form.monthlyfee}}
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}

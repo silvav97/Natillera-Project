@@ -1,0 +1,20 @@
+{% extends 'natillera_account/main.html' %}
+
+
+{% block title %}
+    Natillera Details
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<h1>Detailsss</h1>
+
+{% for natiller in natillera %}
+<p>{{natiller.name}}</p>
+<p>{{natiller.monthlyfee}}</p>
+{% endfor %}
+
+{% endblock %}
